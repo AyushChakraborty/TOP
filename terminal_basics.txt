@@ -51,3 +51,9 @@ the general format of unix commands are:
 where $ is the prompt, option is the behaviour definer of the command and argument is where the
 command acts on. An option without an argument is known as a flag, and option and argument 
 together is known as parameter
+
+-p option is used with mkdir when we need to create a parent directory to store the child one
+if it does not exist, for egs, 
+    mkdir home/documents/foo will return no such file or directory error if home/documents does
+    not exist, but, 
+    mkdir -p home/documents/foo will create home/documents/foo even if it does not exist
