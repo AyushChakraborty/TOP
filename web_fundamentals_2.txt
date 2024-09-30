@@ -1,0 +1,46 @@
+TCP/IP (transmission control protocol, internet protocol) define how data should travel across the 
+internet
+
+Hypertext transfer protocol (HTTP) is an application protocol that defines how clients and servers
+should interact with each other across the internet, but the eventual transfer is guided using
+TCP/IP protocols 
+
+a website is made of 2 types of files, code files which have the html, css, js codes and
+asset files which have the images, audio etc that are displayed on the webpages
+
+so when we enter a web address onto a browser, it first connects to the DNS server to find
+the IP address corresponding to the address given, then an HTTP request is sent through the internet
+to the corresponding server asking it to send a copy of the webpage to the client, if all goes well
+the server sends a "200 OK" message to the client indicating that the page can be viewed then
+the server starts sending packets to the client across different efficient paths, which is
+reconstructed back by the browser which also shows it to the user 
+
+when reconstructing the html files specifically the browser first starts parsing the html code
+then when it encounters <link> it sends a request to the server again to send the css file that 
+is mentioned by <link> and when it encounters <script> it again sends a request to the server for
+the same
+
+the browser then generates an in-memory DOM tree from the parsed HTML, an in-memory CSSOM tree 
+from the parsed CSS, then compiles and executes JS 
+
+structure of domain names: label.TLD where TLD is top level domain
+TLDs tell us about the general purpose of the domain, like com, gov, edu, us, org 
+labels closer to the left are lower heirarchially and those to the right are at the top
+so, developer.mozilla.org has "developer" as subdomain, "mozilla" is the domain and "org"
+is TLD
+
+domain names need to be brought and the renewal has higher priority than new applications for payment
+
+"whois" command can be used in the terminal to find if a domain name is in use and get some info
+about it: whois mozilla.org
+
+now the DNS server is NOT just ONE server but has many servers namely: Resolving name server, 
+root name server, TLD name server , authoritative name server. After a domain name is passed 
+through all this do we get the corresponding IP address which is then fed through to internet
+to that respective server, what happens in a DNS server is:
+    when www.example.com. (. at end is needed for the process to begin, altough its implicit)
+    is typed in the browser, the browser asks the OS which in turn asks the RNS if it has 
+    it stored in the DNS cache, if yes, it just returns it, else the RNS asks the TLDNS which
+    inturn asks the ANS and finally returns the IP address to the OS, in each step of the way, the RNS 
+    updates its cache. The OS then returns the IP address to the browser and it makes the connection
+    to it

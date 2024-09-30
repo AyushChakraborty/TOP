@@ -1,0 +1,36 @@
+When learning, two modes are involved: focus and diffuse mode. Foucs mode happens when you are
+actively learning and trying to focus whereas diffuse mode is when the brain is not learning
+directly but makes the connections subconsciously such as when doing dishes
+
+when stuck in something, make sure to know the specifics then take a break and let the brain
+do the handle the connections
+
+it may take more or less time to learn a certain concept and its not an indication of 
+intelligence but rather the types of experiences one has been exposed to resulting in certain
+concepts being grapsed faster or slower by certain individuals, for egs a person with exposure
+to logic flow from a child learns programming better in general as compared to someone who has
+been epxosed to say only arts
+
+no deadlines! take your time and learn
+
+since the brain is a muscle, it performs better after a rest just like any other muscle, 
+so step away when you want to grasp something better or get stuck anywhere
+
+stick to the path laid out!
+
+ONLY compare yourself to your past self
+
+try your best to make digital notes, web dev requires that
+
+start reading text documentations very slowly, if you feel your mind drift, slow down, 
+come back to that word again and start
+
+avoid rabbit holes as things often require other things to get a deep understanding of a topic
+
+refactoring is changing the structure of the code to a more efficient one without changing the 
+behaviour of the code
+
+if the initial build flow of the code is fine, then during refactroring dont throw it out, 
+instead tweak certain elements of the code to make the code behave the way you want it to
+
+write your unit tests, it makes the code seem more professional

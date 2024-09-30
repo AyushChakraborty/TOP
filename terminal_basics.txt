@@ -1,0 +1,53 @@
+(for unix)
+shell is a program where users can type commands to let the computer do something. The most 
+popular unix shell is bash(bourne again SHell)
+
+/ is the topmost directory, so /Users means that Users dir is under / dir (only true for this, all
+other /s refer to change from top to bottom dir, for egs /Users/Foo means that Foo dir is under
+Users dir)
+
+ls is used to see whats in the current dir, ls -F is used for the same but gives a more comprehensible
+output, where 
+    / indicates that its a dir
+    * indicates that its an executable
+    @ indicates that its a link
+
+links are pointers to another folder or file, there are two types of links, hard and soft(symbolic)
+hard links are where deleting the target file does not delete the reference and they can be 
+created only within the same filespace: ln target_file link_name
+soft links are where deleting the target causes the link to be broken and the link cannot point
+to the location of the file which existed: ln -s target_file link_name
+
+echo "hello" > hello.txt: is used to write hello to a new file called hello.txt
+car hello.txt: gives hello, outputs the text within the file 
+
+"man" gives us help regarding some command: man ls
+
+ls -l gives a longer version of ls output and ls -h is the short version, ls -t arranges the content
+in based on what was changed first
+
+ls [argument] gives the content of some other directory given in [argument]
+
+ls -s gives the size of all the files only(dirs shown as 0)
+
+ls -S sorts the dirs based on size
+
+cd .. takes us one level up the directory tree, and cd ../.. takes you two levels back for egs
+
+ls -F -a gives the detailed lists of directories, links, executables and also the hidden directories
+like ., .. where . refers to itself, .. refers to the directory right above it, hence saying 
+cd .. when within a directory is the same as saying cd [directory one level up]
+the -a flag stands for "show all"
+
+just typing cd/ cd ~ takes us to the home directory 
+
+cd - takes you back to the prev working directory
+
+cd / takes you to the / directory
+
+the general format of unix commands are:
+    $ command [option] [argument]
+
+where $ is the prompt, option is the behaviour definer of the command and argument is where the
+command acts on. An option without an argument is known as a flag, and option and argument 
+together is known as parameter

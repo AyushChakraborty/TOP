@@ -1,0 +1,62 @@
+think of the internet as "wires" buried under the oceans, "dishes" which transmit and recieve
+wireless signals. Servers are special computers directly connected to those wires and webpages
+are files on those server's hardrive
+
+There might be a specific server for google.com and one for dunkindonuts.com (which are 
+domain names) and so on, and each of those servers have a specific IP address or internet protocol address
+
+The computers we use at home is NOT a server since its not connected directly to the internet
+or the "wires", they are instead called clients and are connected to the internet through 
+Internet Service Providers(ISP)
+
+information sent across internet is sent as packets and they are reassembeled back at their
+destination
+
+everything has an IP address, and routers help direct packets around the internet to wherever they
+were intended to go. They are present whenever two or more parts of the internet intersect, we
+have a router
+
+To ensure that a packet goes to its intended server from a client computer the following happens:
+    - initially the packet is only wrapped in the IP address of the client, then as it travels
+    it encounters the first router which wraps the packet in its IP address, then it encounters one
+    more which wraps it further in its IP and so on till it reaches the intended server
+When a packet is sent to the client, it is wrapped in all of its prev wrappings and unravelled
+one by one as it passes through different routers to eventually reach the client 
+
+to access the internet, we always use the DN(domain name) instead of the harder to 
+remember IPA
+
+a mapping which maps all the IPA to domain names is a DNS which is a phonebook for the internet 
+
+all this information is stored in the DNS server which is maintained by ISPs
+
+so when a DN in entered by a user on the client it connects to the DNS server to get the 
+corresponding IPA and then it is sent to that particular server which is identified by the IPA 
+then the server sends information to the client through the internet acorss various routers in from
+of packets 
+
+now since the telephone network already exists in a pretty wide form, we make use of this to 
+connect more houses and areas to the internet. This is done by using MODEMs which convert
+info from network to info mangable by the telephone system and vice versa, but we can also have
+plain optical fibres for connections between servers and computers in which case MODEMs are not
+needed
+
+now to access a specific webpage or website within a server, we make use of the URL or universal
+resource locator
+
+when we type the domain name, we get the website of that particular domain displayed in the
+web browser
+
+now keep in mind that a web server can host multiple websites at the same server, hence a 
+webserver is never used to designate a website
+
+a web browser is a piece of software that helps retreive and display web pages and
+a search engine is a WEBSITE that helps people find web pages from other websites 
+so when a web browser opens up for the first time, the defualt website it opens to is the 
+search engine.
+
+when a client requests for a webpage to be dispayed from the server then a copy of the 
+page is downloaded from the server onto the client machine to be displayed on the browser, after
+this is done, the browser stores DNS CACHE for that page so that when its to be accessed again later,
+it will just use this cache instead of downloading the page locally to be displayed on the browser
+again
