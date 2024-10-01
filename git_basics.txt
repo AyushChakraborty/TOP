@@ -20,3 +20,47 @@ merge his file system into the main branch.
 git thinks about data in different versions as snapshots not differences, which were the case
 with other VCS, and all of this is local 
 
+in git, the file can exist in 3 states: modified, staged, committed
+modified means that changes have been made to the file but they have not been committed in the database
+yet
+staged means that we have marked a modified file to go into the next commit snapshot
+committed means that the staged file has been stored in the database
+
+corresponding to this we get three main sections of a git project: working tree, staging area,
+git directory
+The working tree is where a single copy of a version of the project is pulled from the database
+to be worked with and made changes to, the working tree is in the local disc
+The staging area is where info is contained about what will go into your next commit, the staging 
+area is in the git directory itself 
+the git directory is where git stores metadata and obj database for your project
+
+the repository is the special database that actually stores all the changes 
+
+the thing with git is that its local and all we can do is modify, bring it to stage and commit the
+change to the one and only branch we have, but with github, which is an online platform, we can do
+the same across various users and computers, where we can create a branch of the main one and 
+do they stuff with git that we would do and when we are satisfied, can merge this branch to the
+main one. The process of creating a branch is called "pulling" from the main branch
+
+dont confuse pulling with pull request, where pull request is a github feature which allows the 
+moderators of the main branch to see what changes you have made to your local branch and also
+lets them decide if they want to allow you to push this local branch of yours to the main or no
+
+to clone a repository from github(essentially make your own local branch) type in
+    git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
+where git@github.com:USER-NAME/REPOSITORY-NAME.git is the ssh url of that repo 
+the rep it has been clones from is the main branch also known as remote rep, which is generally
+referred to as origin
+
+git add file: will add that file to staging area
+
+git status: gives the status of all the files under the local branch 
+
+git log: gives the log of all the commits that happened within the local branch, to exit this 
+window, press "q"
+
+git push origin main: pushes the local branch to the main one
+
+any basic git syntax is program | action | destination
+
+

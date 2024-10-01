@@ -19,7 +19,7 @@ soft links are where deleting the target causes the link to be broken and the li
 to the location of the file which existed: ln -s target_file link_name
 
 echo "hello" > hello.txt: is used to write hello to a new file called hello.txt
-car hello.txt: gives hello, outputs the text within the file 
+cat hello.txt: gives hello, outputs the text within the file 
 
 "man" gives us help regarding some command: man ls
 
