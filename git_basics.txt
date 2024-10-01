@@ -6,3 +6,10 @@ an SSH key for you machine can be created using
 
 enter the pass if you want to for it
 
+SSH uses assymetric encryption where a public and private key is generated for both of the users
+sharing the message, the key is generated using RSA algo and these keys are mathematically linked
+
+So what happens is that user 1 uses the public key of user 2 to encrypt the message and then
+user 2 uses his private key to decrypt it, the same goes other way around too. Just that initially
+both users must exhange their public keys
+
