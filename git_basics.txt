@@ -17,3 +17,6 @@ git is nothing but a version control system, there are local, centralised and di
 where git is a DVCS as any developer has a full copy of the file system and any developer can 
 merge his file system into the main branch. 
 
+git thinks about data in different versions as snapshots not differences, which were the case
+with other VCS, and all of this is local 
+
