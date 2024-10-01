@@ -1,0 +1,8 @@
+an SSH key is a secure identifier used to identify your machine, and its used to upload your rep
+without having to enter UN and pass every time 
+
+an SSH key for you machine can be created using 
+    ssh-keygen -t ed25519
+
+enter the pass if you want to for it
+

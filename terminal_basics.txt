@@ -51,3 +51,43 @@ the general format of unix commands are:
 where $ is the prompt, option is the behaviour definer of the command and argument is where the
 command acts on. An option without an argument is known as a flag, and option and argument 
 together is known as parameter
+
+-p option is used with mkdir when we need to create a parent directory to store the child one
+if it does not exist, for egs, 
+    mkdir home/documents/foo will return no such file or directory error if home/documents does
+    not exist, but, 
+    mkdir -p home/documents/foo will create home/documents/foo even if it does not exist
+
+mv is used to change to name of a file
+    mv old_name.txt new_name.txt
+
+using this command we can also move files from other dirs to current one as
+    mv thesis/quotes.txt .
+indicates that quotes.txt under thesis be moved from thesis dir to current dir with the name
+of the file not changing, ie, quotes.txt
+
+cp stands for copy
+    cp org_file.txt new_file.txt
+since cp only copies files, if we want to copy folders we have to use the recursive option -r
+    cp -r folder folder_copy
+
+while using rm, use the -i option or interactive option to prompt the user to type y if they
+actually want to remove the file, its safer that way
+
+again since rm is a command for a file, we have to use the recursive option to delete a dir 
+    rm -r -i folder   (-i added to be safe)
+
+while using cp, if we have cp file1 file2 folder, then it copies file1 and file2 to the folder
+but cp file1 file2 file3 throws an error as it was expecting a folder for the last argument
+
+wildcards are like placeholders for file names, the main ones are * and ? and they work very
+similarly to regex operations, * represents a char being present 0 or more times, and ? represents
+any char present only ONCE(diff from regex), so ls *.txt could be hello.txt, bye.txt, any other
+file ending with .txt format in the folder we are currently in, 
+
+?ethane.txt, could represent methane.txt, if its in the folder we are currently in but 
+*ethane.txt represents ethane.txt or methane.txt 
+
+if the shell is not able to find any such files which mathches the criterion given by the wildcards
+then it takes the file name literally, for egs if its not able to find files which follow *.txt 
+in a given folder then it literally takes *.txt to be file, and results in an error 
