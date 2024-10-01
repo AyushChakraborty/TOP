@@ -13,3 +13,7 @@ So what happens is that user 1 uses the public key of user 2 to encrypt the mess
 user 2 uses his private key to decrypt it, the same goes other way around too. Just that initially
 both users must exhange their public keys
 
+git is nothing but a version control system, there are local, centralised and distributed VCS
+where git is a DVCS as any developer has a full copy of the file system and any developer can 
+merge his file system into the main branch. 
+
