@@ -34,3 +34,12 @@ if the initial build flow of the code is fine, then during refactroring dont thr
 instead tweak certain elements of the code to make the code behave the way you want it to
 
 write your unit tests, it makes the code seem more professional
+
+dont spend time on the "less impressive" projects, the more impressive ones will come 
+soon after, save your energy for those
+
+when asking questions to the discord community, dont just ask to ask, just ask, in the sense
+that ask what you actually want directly and in an open manner instead of asking one question
+about who are willing to help regarding A and then asking the question, it leads to wasted effort
+from both sides
+
