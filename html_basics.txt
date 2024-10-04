@@ -1,3 +1,50 @@
 almost all elements in html page are just prices of content wrapped in tags
 
 hyperText in html means that it can link to different elements in the page or different pages 
+
+we name the html file that has the homepage of the website as index.html as the web servers
+will by default look for an index.html file when it lands on the website
+
+every html file starts with the DOCTYPE which tells which version of html is used for rendering
+the website/document
+
+<html></html> is the root element of the document and all other elements are its children
+
+<body></body> is the first element that should be under <html> and it contains meta information about the
+page, ie, all the info needed to render the webpage in the browser correctly 
+<meta> is a self closing tag, and any html file should have <meta charset="UTF8"> in it
+as without it some special characters cannot be displayed 
+
+<title></title> also goes under <body></body> and gives the name of the tab
+
+and <body></body> is where eveything is defined for the webpage
+
+the lang attribute can used to define the language of a certain tag, and as such since its given to
+html tag, the langs value defined there is applied to the whole page
+
+<em></em> tag is used for italisized text
+<strong></strong> for making strong points
+<b></b> for making text bold
+<i></i> to make it actual italics, used to denote names of something
+
+These are all semantic elements where b is the least semantic of them all
+
+items in an unordered lists have a bullet point before them but with ordered list, they have 
+numbers before them 
+
+to create a link in html, we use the "anchor" element denoted by a, where
+    <a href="..." target="_..." rel="noopener noreferrer">....</a>
+
+    the rel attribute relates to the "relation" between the current page and the linked document
+
+    the value "noopener" means that the new window opened from the link will have no access
+    to the original page from where the link was attatched, this makes it safer incase if the 
+    link opens to a malicious site
+
+    the value "noreferrer" means that the it prevents the opened link form knowing which page
+    has a link to it, essentially detatching it 
+
+    values of target attr can be _self which opens the page pointed by the link in the same page
+    and _blank where the page pointed by the link is opened in a new tab, and mentioning the safety
+    values of rel attr becomes important then (there are more values of this attr, but these are
+    enough for now)
