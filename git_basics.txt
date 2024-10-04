@@ -63,4 +63,6 @@ git push origin main: pushes the local branch to the main one
 
 any basic git syntax is program | action | destination
 
+git commit -m "message" to commit something to the local branch
+
 
