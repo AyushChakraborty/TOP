@@ -1,0 +1,3 @@
+almost all elements in html page are just prices of content wrapped in tags
+
+hyperText in html means that it can link to different elements in the page or different pages 
