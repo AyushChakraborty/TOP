@@ -65,4 +65,40 @@ any basic git syntax is program | action | destination
 
 git commit -m "message" to commit something to the local branch
 
+a good commit message has a subject and a body(all limited to 72 chars)
 
+in the body of the commit message, explain the why and what instead of the how
+
+git log --oneline just shows the subject line of the commits 
+
+git shortlog gives the log based on the users who made commits to the current branch
+
+make sure to write *subject* of the commit in imperative statements, ie statements that convey instructions 
+directly, for egs, instead of writing
+    added fluid functionality
+write
+    add fluid functionality
+
+make it seem as if you are giving instructions to do something, and that conveys the change better
+
+the commit subject should answer the question
+    if applied, the commit will , [subject]
+
+when writing the body, more descriptive words can be used 
+
+in general the commit messages should look like:
+    <type>[optional scope]: <subject description>
+
+    [optional body]
+
+    [optional footer for metadata]
+
+<type> can be "fix" for bugs or "feats" to add features 
+
+
+if we ever want to detach a folder from git, we need to remove the .git file which tracks all
+whats happening in that folder, to do so, simply do
+    rm -rf .git
+
+-r is recursive since rm removes a file and .git is a folder so all files from the folder
+needs to be removed, -f is force option 

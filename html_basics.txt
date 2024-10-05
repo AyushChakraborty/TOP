@@ -48,3 +48,26 @@ to create a link in html, we use the "anchor" element denoted by a, where
     and _blank where the page pointed by the link is opened in a new tab, and mentioning the safety
     values of rel attr becomes important then (there are more values of this attr, but these are
     enough for now)
+
+alt attribute  for <img> (self closing) tag is used when the image cannot be loaded and a text
+has to be displayed 
+
+the four different formats in which images can be displayed is jpg, gif, png, svg
+jpg is used when lots of colors, gradients are to be displayed and when lower space is needed to save
+that image, but jpgs dont allow for transparent pixels
+
+gifs are used to show motion in the image, but are limited in the number of colors it can show
+transparent pixels are allowed hyperText
+
+pngs are bigger in size than jpgs, but have transparent pixels, so they are usually used for '
+logos
+
+svgs can scale up or down without any loss of quality since they use vector based graphics 
+
+* is a universal CSS selector which can be used to override the default style settings of a page, for
+egs, a white margin always exists, to get rid of that we can document
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
