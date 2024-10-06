@@ -73,6 +73,8 @@ git log --oneline just shows the subject line of the commits
 
 git shortlog gives the log based on the users who made commits to the current branch
 
+git log --graph --oneline --decorate is used to give a beautified version of the log
+
 make sure to write *subject* of the commit in imperative statements, ie statements that convey instructions 
 directly, for egs, instead of writing
     added fluid functionality
@@ -101,4 +103,56 @@ whats happening in that folder, to do so, simply do
     rm -rf .git
 
 -r is recursive since rm removes a file and .git is a folder so all files from the folder
-needs to be removed, -f is force option 
+needs to be removed, -f is force option, these two options are combined to make -rf
+
+
+to go back to a certain state of the project, we use
+    git checkout [hash code of that version]
+
+this takes us back to the prev version, but in a diff branch wrt the current working one
+
+
+
+say if we have a folder on our desktop that we want to make a repo of, so we need to have a .git
+folder in it which can track all of the versions of the project in the folder, so we do
+    git init
+
+then to add a README.md to it
+    git add README.md
+
+then since README.md is in the staging area along with other files in the folder, we commit to the same branch
+    git commit -m "message"
+
+then we get a remote connection to the origin 
+    git remote add origin [your github url/repo_name.git]
+
+this way we start a remote connection to repo_name.git repo
+
+then to push this branch that we have been working with to the origin
+    git push origin main
+
+
+to make a new branch
+    git checkout -b "branch_name"
+when we do this we automatically go to the new branch made 
+
+to go to some other branch
+    git checkout "branch_name"
+
+we can check out all the branches available and which we are at by the * to the left of that branch's
+name
+    git branch
+
+here we can do whatever changes we want to do, then merge it to main
+    git push origin main
+(given they have established the remote origin connection to the repo they want to push to)
+
+then they write a pull request on github explaining what they have done differently on their
+branch and I controlling the main branch can review it and decide whether or not to merge the pull
+request to the main branch or no
+
+this pull request acceptance into the main branch is done in github "up", so to make sure
+that the change also reflects locally in the computer, we say
+    git pull origin main
+
+now the pull request changes also are shown locally in the computer
