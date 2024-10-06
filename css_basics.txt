@@ -1,0 +1,53 @@
+the basic css syntax is 
+    selector {
+        property: value;
+    }
+can have many of this property-value pair defined which define many styles for a certain element
+the selector is targeting
+
+* is the universal selector which applies the styles specified by the property-value pair to 
+all the html elements
+
+to apply styles to all the elements of a certain type say p, we use the tag selector
+    p {
+        ...
+    }
+
+to apply styles to elements with a specific class name we use the . notation followed by the name
+of the class, say if the class name was c1, then 
+    .c1 {
+        ...
+    }
+
+note: we can have more than one name for a certain element by using space so 
+    <div class="c1 c2"></div>
+here this ele has class names of c1 and c2 and any one can be refernced to call it 
+
+ids work similar to classes but an element can have only 1 unique id name 
+
+to apply styles to multiple elements, we mention them with comma in the selector
+    .c1, .c2 {
+        ...
+    }
+this is known as selector grouping 
+
+if a ele has 2 class names say, and we want to specifically refer to it while other ele
+have the same first class name, we say
+    .c1.c2 {
+        ...
+    }
+this is known as selector chaining, it cant be done when the selector is selecting just tags
+so if an ele has both class and id say
+    <div class="c1" id="i1"></div>
+then to select this specific ele we use
+    .c1#i1 {
+        ...
+    }
+
+combinators allow us to combine multiple selectors differently than grouping or chaining them,
+specifically the descendant combinator can be applied by just having a space in between 
+so, 
+    .c1 .c2 {}
+means that select the ele with class c2 who is also a descendant of class c1
+it doesnt matter how deep c2 is, it will be selected. Hence even if there are multiple class names
+with c2 with varying levels of depth within c1, all of them will be selected 
