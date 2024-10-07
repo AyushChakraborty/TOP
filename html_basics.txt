@@ -71,3 +71,15 @@ egs, a white margin always exists, to get rid of that we can document
         padding:0;
         box-sizing:border-box;
     }
+
+<,>,& are reserved characters as they mean something in html, hence to reprsent them in the content
+that is to be written in the html file, we use entities, so 
+    > can be represented using &lt;
+    < can be represented using &gt;
+    & can be represented using &amp;
+
+    "..." can be represented using &ldquo;....&rdquo;
+
+so entities are like escape characters in other programming languages like C,python where \ can 
+be thought of as a reserved character in C
+

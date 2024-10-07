@@ -51,3 +51,14 @@ so,
 means that select the ele with class c2 who is also a descendant of class c1
 it doesnt matter how deep c2 is, it will be selected. Hence even if there are multiple class names
 with c2 with varying levels of depth within c1, all of them will be selected 
+
+if we have external css written, to link it to a html file we use the link tag
+    <link rel="stylesheet" href="name.css">  
+    the rel attribute specifies the relation between the html file and the linked file
+
+for internal css, we mention the style tag within the head tag 
+
+for inline css, we done mention the selector since that style is anyways applied to 
+that element, so we just mention the style attribute
+
+inline css always overrides the other css mentions
