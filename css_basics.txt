@@ -62,3 +62,67 @@ for inline css, we done mention the selector since that style is anyways applied
 that element, so we just mention the style attribute
 
 inline css always overrides the other css mentions
+
+there are some units to values, say when we say 200px, px is the unit which indicates that 
+it literally takes up 200 pixels 
+
+vw is another such unit which indicates viewport, so 10vw means that that particular element 
+takes up 10 percent of the window size
+
+em is yet another unit where its relative to the font size of its element
+
+css declarations which have the most specificity ie the incline ones will have more priority
+
+similarly, specificity wise, for selectors, we get
+    ID selectors
+    Class selectors
+    type selectors
+
+if there are two declarations targeting the same ele's behaviour, and both of them have same 
+specificity, then one with more number of selectors wins
+
+    <div class="main">
+    <div class="list" id="subsection">Red text on yellow background</div>
+    </div>
+
+
+    /* rule 1 */
+    #subsection {
+    background-color: yellow;
+    color: blue;
+    }
+
+    /* rule 2 */
+    .main #subsection {
+    color: red;
+    }
+
+both have same specificity due to id being used for both, but since rule 2 have more number
+of selectors being used, its selected, but just the color part gets overriden by rule 2, as only
+that is common to both the declaration rules
+
+    /* rule 1 */
+    .class.second-class {
+    font-size: 12px;
+    }
+
+    /* rule 2 */
+    .class .second-class {
+    font-size: 24px;
+    }
+
+here both have same specificity, just that one uses chaining, other descendant combinator, but
+since rule 2 appears later, it overrides rule 1
+
+also for non block elements in html we cant apply text formatting, these are the elements which
+only take up one line of space. So to apply these styles to such ele we need to place it in a 
+div block which is a block element
+
+while looking at specificity, remember 
+    id-class-type
+
+so for .name {} it has a value of 0-1-0
+and for p, div, h1 {} has a value of 0-0-3
+
+hence .name has more specificity, since a higher order number is filled before even though
+in the second case the lower order number is more in magnitude(which doesnt matter)
