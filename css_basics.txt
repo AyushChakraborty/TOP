@@ -126,3 +126,66 @@ and for p, div, h1 {} has a value of 0-0-3
 
 hence .name has more specificity, since a higher order number is filled before even though
 in the second case the lower order number is more in magnitude(which doesnt matter)
+
+specificity is the artifcact if cascade of css where it is essentially how the browser displays
+the css styles 
+
+we looked at specificity between normal elements, but for types of **rules** which is the first
+tier of cascade we have the order
+    transitions
+
+    !important, which is mentioned at the end of a declatation to make it go to the top of the
+    cascade, egs 
+        p {
+            color: red !important;
+        }
+    this ensures that color property of this ele is at the top of the cascade
+
+    animation
+
+    normal
+
+the second rule of specificity is
+    website
+    user
+    browser
+
+but for !important, the browser comes first and then website
+
+then the third tier of cascade is already written beforehand, which is the specificiy of rules, 
+but writing it again
+    inline
+    layers
+    id
+    class, attribute, pesudoclass
+    type, pesudoelement
+
+layers is something new where we define many layers of styles for an element, and a layer
+wins if its applied later on 
+
+    @layers one, two
+
+    @layer one {
+        body {color: red;}
+    }
+
+    @layer two {
+        body {color: green;}
+    }
+
+in this case green color will be applied, instead of red since the second 
+
+so for
+    .paragraph:first-of-type {
+    color: sandybrown;
+    }
+
+    and
+
+    p.paragraph {
+        color: orchid;
+    }
+
+rule 1 wins as it has (0-0-0-2-0) and rule 2 has (0-0-0-1-1)
+
+rules defined later will win
