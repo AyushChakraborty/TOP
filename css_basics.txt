@@ -189,3 +189,23 @@ so for
 rule 1 wins as it has (0-0-0-2-0) and rule 2 has (0-0-0-1-1)
 
 rules defined later will win
+
+now looking at chrome devtools
+
+command+option+c gets us to elements page to inspect where we can see DOM, css 
+command+option+j gets us to js console
+
+looking at the box model now, every single thing on the webpage is a rectangular box which 
+sits of diff locations on the website 
+
+now things that go wihtin the box in the box model is 
+    content(innermost)
+    padding
+    border
+    margin(outermost)
+
+margin is just used to introduce a separation between different box elements
+
+margin between two close box elements are shared such that the gap between those two ele 
+are the largest margin gap, whichever box element has it. Another way to see it is that 
+margin collapses between two close box elements
