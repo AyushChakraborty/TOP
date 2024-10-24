@@ -208,4 +208,6 @@ margin is just used to introduce a separation between different box elements
 
 margin between two close box elements are shared such that the gap between those two ele 
 are the largest margin gap, whichever box element has it. Another way to see it is that 
-margin collapses between two close box elements
+margin collapses between two close box elements\
+
+
