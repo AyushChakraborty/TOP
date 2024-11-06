@@ -1,0 +1,52 @@
+react can be used using a cdn or toolchains which are more robust, to get a react app up and 
+running we need to get the following things ready:
+    package management like npm or yarn
+    module building like webpack or parcel
+    compilation of the react code using babel
+    react itself
+
+all this will be done given npm is installed using vite 
+    npm create vite@latest first-app -- --template react
+then run 
+    cd first-app   to go to that folder
+    npm install    to install all other dependencies
+    npm run dev    to start the development server which also shows where the site is hosted
+
+react is a library and not a framework as its nore fluid in its application and does not enforce
+anything very strictly
+
+if you are already in a directory where you want to have all the react app files, does
+    npm vite@latest . -- --template react
+
+in the index.html file we see that it has a link to the /src/main.jsx file which serves as
+an entry point for the app, where jsx stands for js extension, and is an extension of js code 
+which uses the react library
+
+using the react library we can write html esque js code
+
+react components or functions must be capitalised(first letter) else the functions will not behave
+as react components
+
+earlier for react to work we had to import react in our js files, but now its not needed
+
+using jsx files we can have both the contents and and rendering logic in a component itself 
+where the rendering part of the components is the return statement
+
+when writing html-esque code within the react component, we have to ensure that if multiple
+ele are mentioned we wrap them under <></> tag and also that all tags in jsx are to be closed 
+explicitely unlike in html 
+
+camelCase most things in jsx, as it turns to js code eventually, and tag's attributes become 
+keys of js objs, so whenever using standard tags of html in jsx components, make sure that
+if some of the attributes use dahed notation in standard html, we use camelCase in jsx 
+so that no conflicts occur
+
+we can embed expression inside jsx using {}, for egs to embed a anonymous func for no reason
+in a certain section, we can just write {() => {....}}
+
+code written within {} are used to render js components within react components, and they
+happen immediately in the next render cycle, no matter where its present, so for egs
+<button onClick={somthing}>...</button> doesnt wait for the button to be clicked, but
+renders the something immediately, but if we want it to wait till its called, we can wrap it
+in an anonymous func
+<button onClick={ () => {something}}>...</button> 

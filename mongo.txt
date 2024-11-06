@@ -1,0 +1,36 @@
+mongoDB is a database which does not use any set schema, that is, data is not stored in row column
+fashion, but in a json file with hierarcies present in it 
+
+
+to install it first 
+    brew install mongo-community@8.0
+
+to install the latest mongoDB server code, this will install an executable, which has to
+code to start the local mongoDB server
+
+now to operate the server, we need a client and that is the mongosh client, which can be installed
+using 
+    brew install mongosh
+
+and now to open mongoDB server each time, we can write the command
+    mongod --config /opt/homebrew/etc/mongod.conf
+
+(these are all local to my machine)
+
+to let the server open each time the system boots, write
+    brew services start mongodb/brew/mongodb-community@8.0
+
+(but lets just start the server manually each time)
+
+then, letting the server run, we open another terminal window, and type in  
+    mongosh
+
+to start the mongosh client which directly interacts with the local server which has 
+a local address of
+    mongodb://localhost:27017
+
+then install mongo compass which is a visual representation of whats happening in the
+server and what and how many databases are running in the server
+
+to connect the server to compass, just add the local address of the server to it, and everything
+is set
