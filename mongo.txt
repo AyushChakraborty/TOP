@@ -34,3 +34,29 @@ server and what and how many databases are running in the server
 
 to connect the server to compass, just add the local address of the server to it, and everything
 is set
+
+some basic commands to run are
+    use name
+
+this will switch to a new db or create one if it does not exist
+
+then when we are in the database, we have to have a collection, and 
+that implicitely mentioned by using
+    db.collection_name.insertOne({json...})  
+
+this adds a single json entry onto the collection names collection_name. Collection is a 
+container or a group of documents within the database. collections are more like folders, 
+that group related json-like documents, and its json like, since its actually bson or
+binary json. 
+
+so when we do 
+        db.collection_name.insertOne({json...})  
+    
+we insert a document into the collection_name collection, and documents within a collection 
+need not follow a certain scheme always, hence mongoDB is a schema-less database
+
+js driver is a module that allows the js code to interact with a specific db, service,
+system, and to ensure that a js code can access the mongodb server, we have to run the js
+code through node.js and hence we have to install the mongoDB driver for node.js, which can be
+done using 
+    npm install mongodb
